@@ -10,25 +10,31 @@ const actions3 = "damage:3, damage:12, damage:9";
 const boss3 = 100;
 const actions4 = "damage:400, heal:400";
 const boss4 = 1;
+
+// const bossFight = (actions, hp) => {
+    
+//     let events = actions.split(',');
+//     let curHP = hp;
+//     events.forEach((event) => {
+//         let type = event.split(':')[0];
+//         let num = event.split(':')[1];
+//         if (curHP > 0) {
+//             if (type === 'heal') {
+//                 curHP += num;
+//                 if (curHp > hp) curHp = hp;
+//             } else {
+//                 curHP -= num;
+//             }
+//         }
+//     });
+//     if (curHP < 1) return "DEAD";
+//     return curHP;
+// }
+
 const bossFight = (actions, hp) => {
     
-    let events = actions.split(',');
-    let curHP = hp;
-    events.forEach((event) => {
-        let type = event.split(':')[0];
-        let num = event.split(':')[1];
-        if (curHP > 0) {
-            if (type === 'heal') {
-                curHP += num;
-                if (curHp > hp) curHp = hp;
-            } else {
-                curHP -= num;
-            }
-        }
-    });
-    if (curHP < 1) return "DEAD";
-    return curHP;
 }
+
 console.log(bossFight(actions1, boss1));
 console.log(bossFight(actions2, boss2));
 console.log(bossFight(actions3, boss3));
